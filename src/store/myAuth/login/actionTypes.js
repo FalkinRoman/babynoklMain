@@ -1,0 +1,6 @@
+export const MY_LOGIN_USER = "MY_LOGIN_USER";
+export const MY_LOGIN_SUCCESS = "MY_LOGIN_SUCCESS";
+export const MY_LOGOUT_USER = "MY_LOGOUT_USER";
+export const MY_LOGOUT_USER_SUCCESS = "MY_LOGOUT_USER_SUCCESS";
+export const MY_API_ERROR = "MY_LOGIN_API_ERROR";
+export const CHECK_AUTH = "CHECK_AUTH";
