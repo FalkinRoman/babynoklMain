@@ -33,32 +33,32 @@ const CamerasId = () => {
   const players = [
     {
       id: "player1",
-      title: "Birch 1",
+      title: "Березка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player2",
-      title: "Birch 2",
+      title: "Ландыши",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player3",
-      title: "Birch 3",
+      title: "Теремок",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player4",
-      title: "Birch 4",
+      title: "Крольчата",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player5",
-      title: "Birch 5",
+      title: "Снежинка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player6",
-      title: "Birch 6",
+      title: "Сеничка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
   ];

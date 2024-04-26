@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 import RadialChart from "../../components/Common/chartjs/RadialChart";
 import MyFilter from "../../components/Common/MyFilter/MyFilter";
 import Pagination from "../../components/Common/ui/Pagination";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import { useFilter } from "../../Hooks/useFilter";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnalytics } from "../../store/analytics/actions";
@@ -86,29 +86,21 @@ const Analytics = () => {
                 {sortedAndSearchedCharts.length === 0 ? (
                   <h3>Ничего не найдено!</h3>
                 ) : (
-                  <TransitionGroup>
-                    <Row>
-                      {sortedAndSearchedCharts
-                        .slice(
-                          (currentPage - 1) * itemsPerPage,
-                          currentPage * itemsPerPage
-                        )
-                        .map((data, index) => (
-                          <CSSTransition
-                            key={index}
-                            timeout={500}
-                            classNames="item123"
-                          >
-                            <Col xl={xlValue} lg={6} md={6}>
-                              <RadialChart
-                                dataChart={data}
-                                analyticsData={analyticsData}
-                              />
-                            </Col>
-                          </CSSTransition>
-                        ))}
-                    </Row>
-                  </TransitionGroup>
+                  <Row>
+                    {sortedAndSearchedCharts
+                      .slice(
+                        (currentPage - 1) * itemsPerPage,
+                        currentPage * itemsPerPage
+                      )
+                      .map((data, index) => (
+                        <Col xl={xlValue} lg={6} md={6} key={index}>
+                          <RadialChart
+                            dataChart={data}
+                            analyticsData={analyticsData}
+                          />
+                        </Col>
+                      ))}
+                  </Row>
                 )}
 
                 <div className="mt-auto">

@@ -7,8 +7,6 @@ const Progressbar = ({ group: oneGroup, data: dataCourses }) => {
   //получаем url страницы
   const params = useParams();
   const courses = dataCourses.data.courses;
-  console.log(courses);
-  console.log(oneGroup);
 
   function coursesName(id) {
     if (id == null || id == undefined) {

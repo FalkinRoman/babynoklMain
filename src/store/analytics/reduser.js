@@ -2,7 +2,8 @@
 import {
   GET_ANALYTICS_SUCCESS,
   GET_ANALYTICS_FAIL,
-  SET_ANALYTICS_LOADING, // Импортируем новый тип действия
+  SET_ANALYTICS_LOADING,
+  LOGOUT_USER,
 } from "./actionTypes";
 
 const INIT_STATE = {
@@ -31,6 +32,8 @@ const analyticsReducer = (state = INIT_STATE, action) => {
         ...state,
         loading: action.payload,
       };
+    case LOGOUT_USER: // Обрабатываем действие выхода пользователя
+      return INIT_STATE;
     default:
       return state;
   }

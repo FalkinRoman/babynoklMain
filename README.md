@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+Начало работы с Babynokl
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект создан с помощью Create React App.
 
-## Available Scripts
+Программы для приложения:
 
-In the project directory, you can run:
+1. Установка Node.js через официальный сайт: https://nodejs.org/en
+   Перейдите на официальный сайт Node.js.
+   Скачайте установочный файл для вашей операционной системы (Windows, macOS или Linux).
+   Запустите установщик и следуйте инструкциям по установке.
+   В процессе установки Node.js также устанавливается NPM.
 
-### `yarn start`
+2. Скачать установщик Python 2 - обязательно!! С 3 версией может не компилироваться sass файлы:
+   Перейдите на официальный сайт Python (https://www.python.org/downloads/release/python-2718/) и загрузите установщик Python 2.x.x для вашей операционной системы. Выберите соответствующий установщик в зависимости от вашей операционной системы (Windows, macOS или Linux).
+   Запустить установщик:
+   После скачивания установщика Python 2, запустите его и следуйте инструкциям по установке. Обычно установщик имеет простой интерфейс, который позволяет выбрать параметры установки и расположение Python 2 на вашем компьютере.
+   Проверить установку:
+   После завершения установки вы можете проверить, что Python 2 был успешно установлен, запустив команду в вашем терминале или командной строке:
+   python2 --version
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+В директории проекта вы можете запустить:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### npm install --force
 
-### `yarn test`
+Ищет файл package.json в текущем каталоге и устанавливает все зависимости, перечисленные в разделе "dependencies"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### npm start
 
-### `yarn build`
+Запускает приложение в режиме разработки.
+Откройте http://localhost:3000, чтобы просмотреть его в браузере.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Страница будет перезагружена при внесении изменений.
+Вы также увидите любые ошибки линтера в консоли.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### npm test
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Запускает тестовый раннер в интерактивном режиме наблюдения.
+Дополнительную информацию см. в разделе запуск тестов.
 
-### `yarn eject`
+### npm build
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Собирает приложение для продакшена в папку build.
+Он корректно упаковывает React в режиме продакшена и оптимизирует сборку для достижения лучшей производительности.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Сборка минифицирована и имена файлов включают хеши.
+Ваше приложение готово к развертыванию!

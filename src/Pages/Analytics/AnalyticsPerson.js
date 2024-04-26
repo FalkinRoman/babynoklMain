@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 import PersonTable from "../../components/Common/table/personTable";
 import MyLoderChart from "../../components/Common/Loader/MyLoderChart";
-import MyCarousel from "../../components/Common/ui/MyCarosel/MyCarousel";
+
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnalytics } from "../../store/analytics/actions";
 import MyPopup from "../../components/Common/ui/MyPopup";

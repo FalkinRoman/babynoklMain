@@ -11,6 +11,8 @@ import {
   CardTitle,
   CardSubtitle,
 } from "reactstrap";
+import MySlideBar from "../../components/Common/SlideBar/MySlideBar";
+import MyBatonsList from "../../components/Common/Cameras/MyBatonsList";
 
 const CamerasClass = () => {
   // Get the parameter from the URL
@@ -41,32 +43,32 @@ const CamerasClass = () => {
   const players = [
     {
       id: "player1",
-      title: "Birch 1",
+      title: "Березка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player2",
-      title: "Birch 2",
+      title: "Ландыши",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player3",
-      title: "Birch 3",
+      title: "Теремок",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player4",
-      title: "Birch 4",
+      title: "Крольчата",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player5",
-      title: "Birch 5",
+      title: "Снежинка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
     {
       id: "player6",
-      title: "Birch 6",
+      title: "Сеничка",
       src: "https://player.vimeo.com/video/220210162?color=67a8e4&amp;title=0&amp;byline=0&amp;portrait=0",
     },
   ];
@@ -80,8 +82,6 @@ const CamerasClass = () => {
             <Col xl={9} lg={9} md={12}>
               <Card>
                 <CardBody>
-                  {/* <CardTitle>{params.id}</CardTitle>
-                  <CardSubtitle>{params.class}</CardSubtitle> */}
                   <div className="embed-responsive embed-responsive-16by9 ratio ratio-16x9">
                     <iframe
                       title={params.class}
@@ -94,8 +94,37 @@ const CamerasClass = () => {
                   </div>
                 </CardBody>
               </Card>
+              <MyBatonsList />
+            </Col>
+            <Col xl={3}>
+              <MySlideBar>
+                {players.map((player) => (
+                  <div key={player.id}>
+                    <Card
+                      style={{ boxShadow: "0 0px 0px rgba(0, 0, 0, 0.08)" }}
+                      className="mb-0"
+                    >
+                      <CardBody className="p-1">
+                        <CardTitle className="m-0">{player.title}</CardTitle>
+                        <div className="embed-responsive embed-responsive-16by9 ratio ratio-16x9">
+                          <iframe
+                            title={player.title}
+                            id={player.id}
+                            className="embed-responsive-item"
+                            src={player.src}
+                            allowFullScreen
+                            allow="autoplay; fullscreen"
+                          />
+                        </div>
+                      </CardBody>
+                    </Card>
+                    <hr className="my-3" style={{ borderColor: "#dee2e6" }} />
+                  </div>
+                ))}
+              </MySlideBar>
             </Col>
           </Row>
+          <Row></Row>
         </Container>
       </div>
     </React.Fragment>

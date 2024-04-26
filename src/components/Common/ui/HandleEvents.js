@@ -2,7 +2,6 @@ import React from "react";
 import Rating from "react-rating";
 
 const HandleEvents = ({ data }) => {
-  console.log(data);
   return (
     <React.Fragment>
       <Rating

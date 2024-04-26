@@ -7,6 +7,7 @@ import {
   myAuth_loginSuccess,
   myAuth_logoutUserSuccess,
 } from "./actions";
+import { logoutUserAnalitics } from "../../analytics/actions";
 import {
   postJwtLogin,
   deleteJwtLogin,
@@ -35,6 +36,7 @@ function* myLogoutUser({ payload: { history } }) {
     const response = yield call(deleteJwtLogin);
     localStorage.removeItem("token");
     yield put(myAuth_logoutUserSuccess());
+    yield put(logoutUserAnalitics()); //срос состояния аналитики
     history("/login");
   } catch (error) {
     yield put(myAuth_apiError(error));
